@@ -8,7 +8,7 @@ type MenuItem =
 
 const menuItems: MenuItem[] = [
   { label: "Home", href: "/" },
-  { label: "Método MDS", href: "/blog/metodo-mds" },
+  { label: "Método MDS", href: "/metodo-mds" },
   {
     label: "Soluções",
     children: [
