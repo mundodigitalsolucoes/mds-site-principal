@@ -627,7 +627,7 @@ export default function Home() {
 
               <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
                 <p className="text-sm font-semibold text-[#374b89]">
-                  Primeiro artigo
+                  Leia nosso conteúdo
                 </p>
                 <h3 className="mt-3 text-2xl font-semibold text-[#2f3453]">
                   O que é o Método MDS e como ele gera crescimento previsível
