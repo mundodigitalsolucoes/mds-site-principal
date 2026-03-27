@@ -630,12 +630,11 @@ export default function Home() {
                   Primeiro artigo
                 </p>
                 <h3 className="mt-3 text-2xl font-semibold text-[#2f3453]">
-                  O que é o Método MDS e como ele transforma marketing em
-                  crescimento previsível
+                  O que é o Método MDS e como ele gera crescimento previsível
+                  para pequenas e médias empresas
                 </h3>
                 <p className="mt-4 text-base leading-7 text-slate-600">
-                  Esse será o primeiro conteúdo do blog e o início de uma trilha
-                  estratégica sobre marketing, vendas, automação e performance.
+                  Entenda como o Método MDS ajuda PMEs a estruturar marketing e vendas com estratégia, dados, aquisição e fidelização para crescer com mais previsibilidade.
                 </p>
                 <Link
                   href="/blog"
