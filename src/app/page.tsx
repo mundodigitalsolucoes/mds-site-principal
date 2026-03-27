@@ -592,27 +592,27 @@ export default function Home() {
                 Materiais gratuitos
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#2f3453] sm:text-4xl">
-                Começamos pelo e-book do Método MDS.
+                E-book - Método MDS na Prática.
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                Um material para mostrar como a MDS enxerga crescimento com
-                método, previsibilidade e estrutura.
+                O guia completo para atrair, vender e fidelizar mais clientes.
+                Mais Demanda Sempre para seu negócio.
               </p>
 
               <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
-                <p className="text-sm font-semibold text-[#374b89]">E-book 01</p>
+                <p className="text-sm font-semibold text-[#374b89]">Baixar E-book</p>
                 <h3 className="mt-3 text-2xl font-semibold text-[#2f3453]">
-                  Método MDS
+                  Método MDS na Prática
                 </h3>
                 <p className="mt-4 text-base leading-7 text-slate-600">
-                  Em breve, esse bloco vira captura de lead com integração no n8n
-                  e entrega automática do material.
+                  Baixe gratuitamente o e-book Método MDS na Prática e aprenda,
+                  como organizar marketing e vendas no seu negócio.
                 </p>
                 <a
                   href="#contato"
                   className="mt-6 inline-flex rounded-full bg-[#2f3453] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#374b89]"
                 >
-                  Quero receber
+                  baixar Agora
                 </a>
               </div>
             </div>
