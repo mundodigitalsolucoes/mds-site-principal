@@ -1,6 +1,6 @@
 export const googleReviewsSummary = {
   averageRating: "5,0",
-  totalReviews: "6",
+  totalReviews: "12",
   profileUrl:
     "https://www.google.com/search?q=Ag%C3%AAncia+de+Marketing+-+Mundo+Digital+Solu%C3%A7%C3%B5es&stick=H4sIAAAAAAAA_-NgU1I1qLBINLY0trBMsUxKSzVLS02xMqiwNLJMMTAztDAwSzIyM04xXMRq4Jh-eFVecmaiQkqqgm9iUXZqSWZeuoKugm9pXkq-gktmemZJYo5CcH5O6eHlh7emFgMAVdR7zFwAAAA&hl=pt-BR&mat=CTIWLk7zRrl8ElYBTVDHnuOr7PLd4ihtZ8ISbDqHQ6Mvku5sSs587NwTEy_BZ_z5kknYk8BcyXgdfaJannrYeNs2IKB7KUMBA4VNdgytfRXfmjEbDBX4ukUL2iapoHwQwA&authuser=0#mpd=~8987292542197175858/customers/reviews",
 };
