@@ -828,7 +828,7 @@ export default function Home() {
 
               <div className="mt-6 flex flex-col gap-3">
                 <a
-                  href="#contato"
+                  href="/contato"
                   className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#2f3453] transition hover:bg-slate-100"
                 >
                   Consultoria gratuita
