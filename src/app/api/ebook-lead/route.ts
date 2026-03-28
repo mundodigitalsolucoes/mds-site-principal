@@ -28,6 +28,15 @@ export async function POST(request: Request) {
     }
   }
 
-  const pdfUrl = new URL("/ebooks/metodo-mds-na-pratica.pdf", request.url);
+  const host =
+    request.headers.get("x-forwarded-host") ?? request.headers.get("host");
+  const protocol = request.headers.get("x-forwarded-proto") ?? "https";
+
+  const baseUrl = host
+    ? `${protocol}://${host}`
+    : new URL(request.url).origin;
+
+  const pdfUrl = new URL("/ebooks/metodo-mds-na-pratica.pdf", baseUrl);
+
   return NextResponse.redirect(pdfUrl, 303);
 }
