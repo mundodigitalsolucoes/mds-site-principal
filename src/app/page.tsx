@@ -419,34 +419,75 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-              <span className="text-sm font-semibold uppercase tracking-[0.22em] text-[#374b89]">
-                Materiais gratuitos
-              </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#2f3453] sm:text-4xl">
-                E-book - Método MDS na Prática.
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">
-                O guia completo para atrair, vender e fidelizar mais clientes.
-                Mais Demanda Sempre para seu negócio.
-              </p>
+  <span className="text-sm font-semibold uppercase tracking-[0.22em] text-[#374b89]">
+    Materiais gratuitos
+  </span>
+  <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#2f3453] sm:text-4xl">
+    E-book - Método MDS na Prática.
+  </h2>
+  <p className="mt-6 text-lg leading-8 text-slate-600">
+    O guia completo para atrair, vender e fidelizar mais clientes.
+    Mais Demanda Sempre para seu negócio.
+  </p>
 
-              <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
-                <p className="text-sm font-semibold text-[#374b89]">Baixar E-book</p>
-                <h3 className="mt-3 text-2xl font-semibold text-[#2f3453]">
-                  Método MDS na Prática
-                </h3>
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                  Baixe gratuitamente o e-book Método MDS na Prática e aprenda,
-                  como organizar marketing e vendas no seu negócio.
-                </p>
-                <a
-                  href="#contato"
-                  className="mt-6 inline-flex rounded-full bg-[#2f3453] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#374b89]"
-                >
-                  baixar Agora
-                </a>
-              </div>
-            </div>
+  <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+    <div className="grid items-center gap-6 md:grid-cols-[180px_1fr]">
+      <div className="flex justify-center">
+        <Image
+          src="/images/ebooks/mockup-ebook-metodo-mds.png"
+          alt="Capa do e-book Método MDS na Prática"
+          width={180}
+          height={240}
+          className="h-auto w-auto drop-shadow-[0_20px_30px_rgba(47,52,83,0.18)]"
+        />
+      </div>
+
+      <div>
+        <p className="text-sm font-semibold text-[#374b89]">Baixar E-book</p>
+        <h3 className="mt-3 text-2xl font-semibold text-[#2f3453]">
+          Método MDS na Prática
+        </h3>
+        <p className="mt-4 text-base leading-7 text-slate-600">
+          Baixe gratuitamente o e-book Método MDS na Prática e aprenda
+          como organizar marketing e vendas no seu negócio.
+        </p>
+
+        <form action="/api/ebook-lead" method="POST" className="mt-6 grid gap-3">
+  <input
+    type="text"
+    name="nome"
+    placeholder="Seu nome"
+    required
+    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#374b89]"
+  />
+
+  <input
+    type="tel"
+    name="whatsapp"
+    placeholder="Seu WhatsApp"
+    required
+    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#374b89]"
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Seu melhor e-mail"
+    required
+    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#374b89]"
+  />
+
+  <button
+    type="submit"
+    className="inline-flex w-fit rounded-full bg-[#2f3453] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#374b89]"
+  >
+    Baixar agora
+  </button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
 
             <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
               <span className="text-sm font-semibold uppercase tracking-[0.22em] text-[#374b89]">
