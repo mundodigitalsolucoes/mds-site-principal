@@ -24,11 +24,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Integração temporariamente indisponível." }, { status: 503 });
     }
 
+    const campaign = clean(body.campaign, 120) || "bora_vender_mais_setembro_2026";
+    const material = clean(body.material_requested, 40) || "ebook";
+    const createdAt = new Date().toISOString();
+
     const payload = {
       event: "lead_magnet_access",
-      campaign: clean(body.campaign, 120) || "bora_vender_mais_setembro_2026",
-      material_requested: clean(body.material_requested, 40) || "ebook",
+      campaign,
+      material,
+      material_requested: material,
       source: "site",
+      nome: name,
       name,
       email,
       whatsapp,
@@ -45,7 +51,8 @@ export async function POST(request: NextRequest) {
       wbraid: clean(body.wbraid, 300) || null,
       user_agent: request.headers.get("user-agent"),
       ip: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || null,
-      captured_at: new Date().toISOString(),
+      created_at: createdAt,
+      captured_at: createdAt,
     };
 
     const webhookResponse = await fetch(webhookUrl, {
