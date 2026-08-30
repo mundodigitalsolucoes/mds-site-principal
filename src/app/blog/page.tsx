@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Conteúdos sobre marketing, vendas, sites inteligentes e crescimento previsível para pequenas e médias empresas.",
 };
 
+const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
+
 type BlogPageProps = {
   searchParams?: Promise<{
     q?: string;
@@ -167,13 +169,23 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   {featuredPost.excerpt}
                 </p>
 
-                <div className="mt-6">
+                <div className="mt-6 flex flex-wrap gap-3">
                   <Link
                     href={`/blog/${featuredPost.slug}`}
                     className="inline-flex items-center rounded-xl bg-[#2f3453] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                   >
                     Ler matéria completa
                   </Link>
+
+                  {featuredPost.slug === BORA_VENDER_SETEMBRO_SLUG && (
+                    <a
+                      href="/ebooks/guia-bora-vender-setembro-2026.pdf"
+                      download
+                      className="inline-flex items-center rounded-xl bg-[#e0ae4f] px-5 py-3 text-sm font-bold text-[#202640] transition hover:-translate-y-0.5 hover:brightness-105"
+                    >
+                      Baixar Guia grátis
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
