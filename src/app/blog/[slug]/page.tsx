@@ -10,7 +10,7 @@ type BlogPostPageProps = {
 };
 
 const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
-const BORA_VENDER_SETEMBRO_AUDIO = "/audios/blog/bora-vender-mais-setembro-2026.mp3";
+const BORA_VENDER_SETEMBRO_AUDIO = "/audios/blog/bora-vender-mais-setembro-2026.MP3";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
@@ -23,7 +23,7 @@ function formatInlineMarkdown(text: string) {
 
 function renderAudioPlayer() {
   return (
-    <section className="mx-auto max-w-4xl px-6 pb-4 md:px-8" aria-label="Ouça este artigo">
+    <section className="mx-auto max-w-4xl px-6 pb-4 md:px-8" aria-label="Ouça o Guia Bora Vender+">
       <div className="overflow-hidden rounded-3xl bg-[#2f3453] text-white shadow-xl ring-1 ring-[#374b89]/20">
         <div className="relative p-6 sm:p-8">
           <div className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-[#374b89]/50 blur-3xl" />
@@ -36,8 +36,8 @@ function renderAudioPlayer() {
                 </div>
                 <div>
                   <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#f3c96e]">Bora Vender+ em áudio</span>
-                  <h2 className="mt-1 text-xl font-bold tracking-tight sm:text-2xl">Prefere ouvir este artigo?</h2>
-                  <p className="mt-1 text-sm text-slate-300">Narração por Fábio Alves • ouça enquanto trabalha, dirige ou planeja sua campanha.</p>
+                  <h2 className="mt-1 text-xl font-bold tracking-tight sm:text-2xl">Ouça o Guia completo</h2>
+                  <p className="mt-1 text-sm text-slate-300">Ouça enquanto trabalha, dirige ou planeja sua próxima campanha.</p>
                 </div>
               </div>
               <a href={BORA_VENDER_SETEMBRO_AUDIO} download className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/15">
@@ -46,13 +46,13 @@ function renderAudioPlayer() {
               </a>
             </div>
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.07] p-3 sm:p-4">
-              <audio controls preload="metadata" className="block h-12 w-full" aria-label="Áudio do artigo Bora Vender+ Setembro 2026">
+              <audio controls preload="metadata" className="block h-12 w-full" aria-label="Áudio do Guia Bora Vender+ Setembro 2026">
                 <source src={BORA_VENDER_SETEMBRO_AUDIO} type="audio/mpeg" />
                 Seu navegador não suporta reprodução de áudio.
               </audio>
             </div>
             <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
-              <span>Conteúdo completo do artigo</span>
+              <span>Guia completo em áudio</span>
               <span>MP3 • disponível para download</span>
             </div>
           </div>
