@@ -23,9 +23,9 @@ function formatInlineMarkdown(text: string) {
 function renderGuideBanner(index: number) {
   return (
     <section key={index} id="baixar-guia" className="my-10 overflow-hidden rounded-3xl bg-[#2f3453] text-white shadow-lg ring-1 ring-[#374b89]/20">
-      <div className="grid gap-7 p-6 sm:p-8 md:grid-cols-[210px_1fr] md:items-center md:gap-10 md:p-10">
-        <div className="mx-auto w-full max-w-[210px]">
-          <img src="/images/blog/bora-vender-setembro-2026-ebook.jpg?v=6" alt="Capa do Guia Bora Vender+ Setembro 2026" width="420" height="525" className="block aspect-[4/5] w-full rounded-2xl object-cover shadow-2xl ring-1 ring-white/10" />
+      <div className="grid gap-7 p-6 sm:p-8 md:grid-cols-[260px_1fr] md:items-center md:gap-10 md:p-10">
+        <div className="mx-auto w-full max-w-[260px]">
+          <img src="/images/blog/bora-vender-setembro-2026-ebook.png?v=1" alt="Mockup do Guia Bora Vender+ Setembro 2026" width="260" height="347" className="block h-auto w-full object-contain drop-shadow-2xl" />
         </div>
         <div>
           <span className="inline-flex rounded-full border border-[#e0ae4f]/40 bg-[#e0ae4f]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#f3c96e]">Guia gratuito • Setembro 2026</span>
