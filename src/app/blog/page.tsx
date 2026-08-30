@@ -132,13 +132,14 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             <div className="grid md:grid-cols-2">
               <Link
                 href={`/blog/${featuredPost.slug}`}
-                className="relative block min-h-[280px] bg-slate-100"
+                className="relative block min-h-[280px] bg-[#071b45]"
               >
                 <Image
                   src={featuredPost.coverImage}
                   alt={featuredPost.title}
                   fill
-                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-contain"
                   priority
                 />
               </Link>
