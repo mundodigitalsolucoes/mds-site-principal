@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+import BoraVenderLeadGate from "@/components/BoraVenderLeadGate";
 import { getAllCategories, getAllPosts, getFeaturedPost } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -176,17 +177,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   >
                     Ler matéria completa
                   </Link>
-
-                  {featuredPost.slug === BORA_VENDER_SETEMBRO_SLUG && (
-                    <a
-                      href="/ebooks/guia-bora-vender-setembro-2026.pdf"
-                      download
-                      className="inline-flex items-center rounded-xl bg-[#e0ae4f] px-5 py-3 text-sm font-bold text-[#202640] transition hover:-translate-y-0.5 hover:brightness-105"
-                    >
-                      Baixar Guia grátis
-                    </a>
-                  )}
                 </div>
+
+                {featuredPost.slug === BORA_VENDER_SETEMBRO_SLUG && (
+                  <BoraVenderLeadGate variant="featured" />
+                )}
               </div>
             </div>
           </article>
