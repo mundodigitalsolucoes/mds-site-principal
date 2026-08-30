@@ -1,0 +1,1 @@
+A capa do banner deve usar a imagem de blog existente enquanto a capa vertical é corrigida.
