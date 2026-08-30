@@ -11,6 +11,8 @@ type BlogPostPageProps = {
   }>;
 };
 
+const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
+
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("pt-BR", {
     day: "2-digit",
@@ -31,7 +33,65 @@ function formatInlineMarkdown(text: string) {
   });
 }
 
-function renderContentBlocks(content: string) {
+function renderGuideBanner(index: number) {
+  return (
+    <section
+      key={index}
+      id="baixar-guia"
+      className="my-10 overflow-hidden rounded-3xl bg-[#2f3453] text-white shadow-lg ring-1 ring-[#374b89]/20"
+    >
+      <div className="grid gap-7 p-6 sm:p-8 md:grid-cols-[210px_1fr] md:items-center md:gap-10 md:p-10">
+        <div className="mx-auto w-full max-w-[210px]">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#202640] shadow-2xl ring-1 ring-white/10">
+            <Image
+              src="/images/blog/bora-vender-setembro-2026-ebook.webp"
+              alt="Capa do Guia Bora Vender+ Setembro 2026"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 210px, 210px"
+            />
+          </div>
+        </div>
+
+        <div>
+          <span className="inline-flex rounded-full border border-[#e0ae4f]/40 bg-[#e0ae4f]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#f3c96e]">
+            Guia gratuito • Setembro 2026
+          </span>
+
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
+            Leve as 3 Datas de Ouro para o seu negócio
+          </h2>
+
+          <p className="mt-4 max-w-xl text-base leading-7 text-slate-200">
+            Baixe o Guia Bora Vender+ com as campanhas de setembro organizadas em formato de playbook: Método MDS, exemplos, checklists, prompts, divulgação e tracking com TAGs.
+          </p>
+
+          <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold text-slate-200">
+            <span className="rounded-full border border-white/15 px-3 py-1.5">23 páginas</span>
+            <span className="rounded-full border border-white/15 px-3 py-1.5">3 campanhas práticas</span>
+            <span className="rounded-full border border-white/15 px-3 py-1.5">Método MDS aplicado</span>
+          </div>
+
+          <div className="mt-7">
+            <a
+              href="/materiais/guia-bora-vender-setembro-2026.pdf"
+              download
+              className="inline-flex items-center justify-center rounded-xl bg-[#e0ae4f] px-6 py-3.5 text-sm font-bold text-[#202640] transition hover:-translate-y-0.5 hover:brightness-105"
+            >
+              Baixar o Guia gratuitamente
+            </a>
+          </div>
+
+          <p className="mt-3 text-xs text-slate-400">
+            PDF gratuito • leitura otimizada para celular
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function renderContentBlocks(content: string, slug: string) {
   const blocks = content
     .trim()
     .split(/\n\s*\n/)
@@ -39,6 +99,13 @@ function renderContentBlocks(content: string) {
     .filter(Boolean);
 
   return blocks.map((block, index) => {
+    if (
+      slug === BORA_VENDER_SETEMBRO_SLUG &&
+      block === "**[DOWNLOAD DO GUIA SERÁ INSERIDO AQUI]**"
+    ) {
+      return renderGuideBanner(index);
+    }
+
     if (block.startsWith("## ")) {
       return (
         <h2
@@ -125,8 +192,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = getRelatedPosts(post.slug, post.category, 3);
-  const contentBlocks = renderContentBlocks(post.content);
+  const contentBlocks = renderContentBlocks(post.content, post.slug);
   const middleIndex = Math.ceil(contentBlocks.length / 2);
+  const showSecondaryCta = post.slug !== BORA_VENDER_SETEMBRO_SLUG;
 
   return (
     <main
@@ -220,7 +288,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.cta.primaryLabel}
               </Link>
 
-              {post.cta.secondaryLabel && post.cta.secondaryHref && (
+              {showSecondaryCta && post.cta.secondaryLabel && post.cta.secondaryHref && (
                 <Link
                   href={post.cta.secondaryHref}
                   target="_blank"
@@ -257,7 +325,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.cta.primaryLabel}
               </Link>
 
-              {post.cta.secondaryLabel && post.cta.secondaryHref && (
+              {showSecondaryCta && post.cta.secondaryLabel && post.cta.secondaryHref && (
                 <Link
                   href={post.cta.secondaryHref}
                   target="_blank"
