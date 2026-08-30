@@ -44,9 +44,10 @@ function renderGuideBanner(index: number) {
         <div className="mx-auto w-full max-w-[210px]">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#202640] shadow-2xl ring-1 ring-white/10">
             <Image
-              src="/images/blog/bora-vender-setembro-2026-ebook.webp"
+              src="/images/blog/bora-vender-setembro-2026-ebook.webp?v=4"
               alt="Capa do Guia Bora Vender+ Setembro 2026"
               fill
+              unoptimized
               className="object-cover"
               sizes="(max-width: 768px) 210px, 210px"
             />
