@@ -1,7 +1,8 @@
 export type BlogCategory =
   | "Método MDS"
   | "Marketing e Vendas"
-  | "Sites Inteligentes";
+  | "Sites Inteligentes"
+  | "Bora Vender+";
 
 export interface BlogPost {
   slug: string;
