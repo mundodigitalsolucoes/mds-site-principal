@@ -563,13 +563,17 @@ Se o cliente precisa parar por um minuto para entender a arte, provavelmente exi
 
 Uma estrutura clássica que continua funcionando muito bem é AIDA:
 
-**Atenção** — faça a pessoa parar.
+**Atenção**
+Faça a pessoa parar.
 
-**Interesse** — mostre por que aquilo importa.
+**Interesse**
+Mostre por que aquilo importa.
 
-**Desejo** — apresente o benefício.
+**Desejo**
+Apresente o benefício.
 
-**Ação** — diga claramente o próximo passo.
+**Ação**
+Diga claramente o próximo passo.
 
 Um erro comum é criar uma comunicação inteira e esquecer justamente da ação.
 
@@ -585,7 +589,7 @@ Mas existe uma diferença enorme entre pedir:
 
 **“Faça um post de Primavera.”**
 
-E fornecer contexto.
+e fornecer contexto.
 
 Quanto mais contexto você entrega, melhor tende a ser o resultado.
 
@@ -633,7 +637,7 @@ A ideia é que você consiga abrir o material e pensar:
 
 E consiga realmente aplicar.
 
-**O botão de download do e-book será inserido aqui assim que o material final estiver publicado.**
+**[DOWNLOAD DO GUIA SERÁ INSERIDO AQUI]**
 
 ## E se você quiser acelerar?
 
@@ -662,10 +666,6 @@ Ela permite que uma boa estratégia ganhe escala.
 E esse é o ponto.
 
 **Crescimento previsível não é sorte. É método.**
-
-**Fábio Alves**  
-*Especialista em Marketing e Vendas*  
-*Mundo Digital Soluções*
   `,
   cta: {
     title: "Quer aplicar essas estratégias no seu negócio?",
@@ -674,6 +674,8 @@ E esse é o ponto.
     primaryLabel: "Quero minha consultoria gratuita",
     primaryHref:
       "https://wa.me/5517992822597?text=%5BBORA%20VENDER%2B%5D%20Quero%20minha%20consultoria%20gratuita.%20Me%20transfira%20para%20um%20especialista%20da%20MDS.",
+    secondaryLabel: "Conhecer a Mundo Digital Soluções",
+    secondaryHref: "https://mundodigitalsolucoes.com.br/",
   },
 };
 
