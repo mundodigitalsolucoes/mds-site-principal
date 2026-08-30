@@ -28,3 +28,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+#baixar-guia div:has(> img[alt="Capa do Guia Bora Vender+ Setembro 2026"]) {
+  background-image: url('/images/blog/bora-vender-setembro-2026-ebook.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#baixar-guia img[alt="Capa do Guia Bora Vender+ Setembro 2026"] {
+  opacity: 0;
+}
