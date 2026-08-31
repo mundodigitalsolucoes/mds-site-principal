@@ -129,17 +129,17 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </div>
 
           <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-            <div className="grid md:grid-cols-2">
+            <div className="grid md:grid-cols-2 md:items-start">
               <Link
                 href={`/blog/${featuredPost.slug}`}
-                className="relative block min-h-[280px] bg-[#071b45]"
+                className="relative block aspect-[1200/630] w-full overflow-hidden bg-slate-100 md:self-start"
               >
                 <Image
                   src={featuredPost.coverImage}
                   alt={featuredPost.title}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-contain"
+                  className="object-cover"
                   priority
                 />
               </Link>
