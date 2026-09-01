@@ -200,6 +200,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="relative h-[240px] overflow-hidden rounded-3xl bg-slate-100 md:h-[420px]">
           <Image src={post.coverImage} alt={post.title} fill priority className="object-cover" />
         </div>
+
+        {post.slug === BORA_VENDER_SETEMBRO_SLUG && (
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <a href="#baixar-guia" className="inline-flex w-full items-center justify-center rounded-xl bg-[#e0ae4f] px-5 py-3.5 text-sm font-bold text-[#202640] transition hover:brightness-105">
+              Baixar Guia grátis
+            </a>
+            <a href="#ouvir-guia" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
+              Ouvir Guia em áudio
+            </a>
+          </div>
+        )}
       </section>
 
       {showAudioPlayer && <BoraVenderLeadGate variant="audio" />}
