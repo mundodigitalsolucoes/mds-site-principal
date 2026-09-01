@@ -9,6 +9,18 @@ export const metadata: Metadata = {
   title: "Blog | Mundo Digital Soluções",
   description:
     "Conteúdos sobre marketing, vendas, sites inteligentes e crescimento previsível para pequenas e médias empresas.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog | Mundo Digital Soluções",
+    description:
+      "Conteúdos sobre marketing, vendas, sites inteligentes e crescimento previsível para pequenas e médias empresas.",
+    url: "/blog",
+    siteName: "Mundo Digital Soluções",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
