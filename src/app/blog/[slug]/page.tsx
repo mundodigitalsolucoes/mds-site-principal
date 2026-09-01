@@ -95,14 +95,24 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!post) return { title: "Artigo não encontrado | Mundo Digital Soluções" };
 
+  const canonicalUrl = `/blog/${post.slug}`;
+
   return {
     title: post.seoTitle,
     description: post.seoDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: post.seoTitle,
       description: post.seoDescription,
+      url: canonicalUrl,
+      siteName: "Mundo Digital Soluções",
+      locale: "pt_BR",
       images: [post.coverImage],
       type: "article",
+      publishedTime: post.publishedAt,
+      authors: [post.author],
     },
   };
 }
@@ -112,6 +122,34 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const articleUrl = `https://mundodigitalsolucoes.com.br/blog/${post.slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.seoDescription,
+    image: [`https://mundodigitalsolucoes.com.br${post.coverImage}`],
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Mundo Digital Soluções",
+      url: "https://mundodigitalsolucoes.com.br",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://mundodigitalsolucoes.com.br/logo-mundo-digital.png",
+      },
+    },
+  };
+
   const relatedPosts = getRelatedPosts(post.slug, post.category, 3);
   const contentBlocks = renderContentBlocks(post.content, post.slug);
   const middleIndex = Math.ceil(contentBlocks.length / 2);
@@ -120,6 +158,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main id="topo" className="bg-white text-slate-900 selection:bg-[#374b89] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <section className="border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-4xl px-6 py-12 md:px-8 md:py-16">
           <nav className="mb-6 flex flex-wrap items-center gap-2 text-sm text-slate-500">
