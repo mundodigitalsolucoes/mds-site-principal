@@ -39,28 +39,32 @@ function startDownload(url: string, filename: string) {
 function trackBlogLead(material: MaterialRequested) {
   if (typeof window === "undefined") return;
 
-  const eventParams = {
-    source_area: "blog",
-    campaign: CAMPAIGN,
-    material,
-    content_slug: window.location.pathname,
-  };
+  try {
+    const eventParams = {
+      source_area: "blog",
+      campaign: CAMPAIGN,
+      material,
+      content_slug: window.location.pathname,
+    };
 
-  const analyticsWindow = window as typeof window & {
-    gtag?: (...args: unknown[]) => void;
-    dataLayer?: Array<Record<string, unknown>>;
-  };
+    const analyticsWindow = window as typeof window & {
+      gtag?: (...args: unknown[]) => void;
+      dataLayer?: Array<Record<string, unknown>>;
+    };
 
-  if (typeof analyticsWindow.gtag === "function") {
-    analyticsWindow.gtag("event", "blog_generate_lead", eventParams);
-    return;
+    if (typeof analyticsWindow.gtag === "function") {
+      analyticsWindow.gtag("event", "blog_generate_lead", eventParams);
+      return;
+    }
+
+    analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
+    analyticsWindow.dataLayer.push({
+      event: "blog_generate_lead",
+      ...eventParams,
+    });
+  } catch (error) {
+    console.warn("Falha ao registrar blog_generate_lead", error);
   }
-
-  analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
-  analyticsWindow.dataLayer.push({
-    event: "blog_generate_lead",
-    ...eventParams,
-  });
 }
 
 export default function BoraVenderLeadGate({ variant }: BoraVenderLeadGateProps) {
@@ -125,8 +129,10 @@ export default function BoraVenderLeadGate({ variant }: BoraVenderLeadGateProps)
       window.dispatchEvent(new Event(UNLOCK_EVENT));
       setUnlocked(true);
       setShowForm(false);
-      trackBlogLead(requestedMaterial);
+
+      // O download é a ação principal e nunca deve depender do Analytics.
       downloadRequestedMaterial(requestedMaterial);
+      trackBlogLead(requestedMaterial);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Não foi possível liberar o material agora.");
     } finally {
