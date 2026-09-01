@@ -4,6 +4,18 @@ export const metadata: Metadata = {
   title: "Contato | Mundo Digital Soluções",
   description:
     "Fale com a Mundo Digital Soluções e solicite uma consultoria gratuita para marketing, vendas, CRM, tráfego e sites inteligentes.",
+  alternates: {
+    canonical: "/contato",
+  },
+  openGraph: {
+    title: "Contato | Mundo Digital Soluções",
+    description:
+      "Fale com a Mundo Digital Soluções e solicite uma consultoria gratuita para marketing, vendas, CRM, tráfego e sites inteligentes.",
+    url: "/contato",
+    siteName: "Mundo Digital Soluções",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 const diferenciais = [
