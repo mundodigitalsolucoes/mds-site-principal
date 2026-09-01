@@ -13,6 +13,7 @@ const STORAGE_KEY = "mds_bora_vender_setembro_2026_unlocked";
 const UNLOCK_EVENT = "mds-bora-vender-unlocked";
 const AUDIO_URL = "/audios/blog/bora-vender-mais-setembro-2026.MP3";
 const GUIDE_URL = "/ebooks/guia-bora-vender-setembro-2026.pdf";
+const CAMPAIGN = "bora_vender_mais_setembro_2026";
 
 function getTracking() {
   if (typeof window === "undefined") return {};
@@ -33,6 +34,33 @@ function startDownload(url: string, filename: string) {
   document.body.appendChild(link);
   link.click();
   link.remove();
+}
+
+function trackBlogLead(material: MaterialRequested) {
+  if (typeof window === "undefined") return;
+
+  const eventParams = {
+    source_area: "blog",
+    campaign: CAMPAIGN,
+    material,
+    content_slug: window.location.pathname,
+  };
+
+  const analyticsWindow = window as typeof window & {
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: Array<Record<string, unknown>>;
+  };
+
+  if (typeof analyticsWindow.gtag === "function") {
+    analyticsWindow.gtag("event", "blog_generate_lead", eventParams);
+    return;
+  }
+
+  analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
+  analyticsWindow.dataLayer.push({
+    event: "blog_generate_lead",
+    ...eventParams,
+  });
 }
 
 export default function BoraVenderLeadGate({ variant }: BoraVenderLeadGateProps) {
@@ -80,7 +108,7 @@ export default function BoraVenderLeadGate({ variant }: BoraVenderLeadGateProps)
           email: email.trim(),
           whatsapp: whatsapp.trim(),
           material_requested: requestedMaterial,
-          campaign: "bora_vender_mais_setembro_2026",
+          campaign: CAMPAIGN,
           source: "site",
           landing_page: window.location.href,
           referrer: document.referrer || null,
@@ -97,6 +125,7 @@ export default function BoraVenderLeadGate({ variant }: BoraVenderLeadGateProps)
       window.dispatchEvent(new Event(UNLOCK_EVENT));
       setUnlocked(true);
       setShowForm(false);
+      trackBlogLead(requestedMaterial);
       downloadRequestedMaterial(requestedMaterial);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Não foi possível liberar o material agora.");
