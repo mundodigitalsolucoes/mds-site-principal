@@ -21,14 +21,31 @@ function formatDate(date: string) {
 }
 
 function formatInlineMarkdown(text: string) {
-  const parts = text.split(/(\*\*.*?\*\*)/g);
-  return parts.map((part, index) =>
-    part.startsWith("**") && part.endsWith("**") ? (
-      <strong key={index}>{part.slice(2, -2)}</strong>
-    ) : (
-      part
-    ),
-  );
+  const parts = text.split(/(\*\*.*?\*\*|\[[^\]]+\]\(https?:\/\/[^)]+\))/g);
+
+  return parts.map((part, index) => {
+    const link = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)]+)\)$/);
+
+    if (link) {
+      return (
+        <a
+          key={index}
+          href={link[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-[#374b89] underline decoration-[#374b89]/30 underline-offset-4 transition hover:text-[#2f3453]"
+        >
+          {link[1]}
+        </a>
+      );
+    }
+
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+
+    return part;
+  });
 }
 
 function renderGuideBanner(index: number) {
