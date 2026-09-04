@@ -21,7 +21,7 @@ const post: BlogPost = {
     "ticket médio",
     "Método MDS",
   ],
-  coverImage: "/images/blog/bora-vender-pizzarias-2026.svg",
+  coverImage: "/images/blog/bora-vender-pizzarias-2026.png",
   seoTitle: "12 campanhas para aumentar o faturamento da pizzaria",
   seoDescription:
     "Conheça 12 campanhas para atrair clientes, aumentar o ticket médio e gerar recorrência na sua pizzaria sem depender de descontos permanentes.",
