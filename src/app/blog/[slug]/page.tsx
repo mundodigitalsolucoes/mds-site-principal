@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import BoraVenderLeadGate from "@/components/BoraVenderLeadGate";
+import BoraVenderPizzariasLeadGate from "@/components/BoraVenderPizzariasLeadGate";
 import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 
 type BlogPostPageProps = {
@@ -11,6 +12,7 @@ type BlogPostPageProps = {
 };
 
 const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
+const BORA_VENDER_PIZZARIAS_SLUG = "12-campanhas-para-pizzaria-aumentar-faturamento";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("pt-BR", {
@@ -172,6 +174,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const middleIndex = Math.ceil(contentBlocks.length / 2);
   const showSecondaryCta = post.slug !== BORA_VENDER_SETEMBRO_SLUG;
   const showAudioPlayer = post.slug === BORA_VENDER_SETEMBRO_SLUG;
+  const showPizzariasPlaybook = post.slug === BORA_VENDER_PIZZARIAS_SLUG;
 
   return (
     <main id="topo" className="bg-white text-slate-900 selection:bg-[#374b89] selection:text-white">
@@ -228,9 +231,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </a>
           </div>
         )}
+
+        {showPizzariasPlaybook && (
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <a href="#baixar-playbook-pizzarias" className="inline-flex w-full items-center justify-center rounded-xl bg-[#e0ae4f] px-5 py-3.5 text-sm font-bold text-[#202640] transition hover:brightness-105">
+              Baixar Playbook grátis
+            </a>
+            <a href="https://youtu.be/Wkvwo0ZZrmQ?si=tOQbD4-5vciwzKNE" target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
+              ▶ Podcast no YouTube
+            </a>
+            <a href="https://open.spotify.com/episode/75OXbLig6DJVpfmD5bN8ue?si=L-I4D0r2RlySV9Y-KhCw8Q" target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
+              ♫ Ouvir no Spotify
+            </a>
+          </div>
+        )}
       </section>
 
       {showAudioPlayer && <BoraVenderLeadGate variant="audio" />}
+      {showPizzariasPlaybook && <BoraVenderPizzariasLeadGate />}
 
       <article className="mx-auto max-w-4xl px-6 pb-8 md:px-8">
         <div className="max-w-none">{contentBlocks.slice(0, middleIndex)}</div>
