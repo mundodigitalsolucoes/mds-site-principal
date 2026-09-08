@@ -13,6 +13,7 @@ type BlogPostPageProps = {
 
 const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
 const BORA_VENDER_PIZZARIAS_SLUG = "12-campanhas-para-pizzaria-aumentar-faturamento";
+const DIA_DO_CLIENTE_SLUG = "dia-do-cliente-como-vender-mais";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("pt-BR", {
@@ -63,7 +64,7 @@ function renderContentBlocks(content: string, slug: string) {
 
   return blocks.map((block, index) => {
     if (
-      slug === BORA_VENDER_SETEMBRO_SLUG &&
+      (slug === BORA_VENDER_SETEMBRO_SLUG || slug === DIA_DO_CLIENTE_SLUG) &&
       block === "**[DOWNLOAD DO GUIA SERÁ INSERIDO AQUI]**"
     ) {
       return renderGuideBanner(index);
@@ -175,6 +176,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const showSecondaryCta = post.slug !== BORA_VENDER_SETEMBRO_SLUG;
   const showAudioPlayer = post.slug === BORA_VENDER_SETEMBRO_SLUG;
   const showPizzariasPlaybook = post.slug === BORA_VENDER_PIZZARIAS_SLUG;
+  const showDiaDoClienteResources = post.slug === DIA_DO_CLIENTE_SLUG;
 
   return (
     <main id="topo" className="bg-white text-slate-900 selection:bg-[#374b89] selection:text-white">
@@ -232,6 +234,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         )}
 
+        {showDiaDoClienteResources && (
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <a href="#baixar-guia" className="inline-flex w-full items-center justify-center rounded-xl bg-[#e0ae4f] px-5 py-3.5 text-sm font-bold text-[#202640] transition hover:brightness-105">
+              Baixar E-book Bora Vender+ grátis
+            </a>
+            <a href="#ouvir-dia-do-cliente" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
+              ▶ Ouça nosso podcast Bora Vender+ Dia do Cliente
+            </a>
+          </div>
+        )}
+
         {showPizzariasPlaybook && (
           <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
             <a href="#baixar-playbook-pizzarias" className="inline-flex w-full items-center justify-center rounded-xl bg-[#e0ae4f] px-5 py-3.5 text-sm font-bold text-[#202640] transition hover:brightness-105">
@@ -248,6 +261,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       {showAudioPlayer && <BoraVenderLeadGate variant="audio" />}
+      {showDiaDoClienteResources && (
+        <section id="ouvir-dia-do-cliente" className="mx-auto max-w-4xl px-6 pb-4 md:px-8" aria-label="Podcast Bora Vender+ Dia do Cliente">
+          <div className="overflow-hidden rounded-3xl bg-[#2f3453] text-white shadow-xl ring-1 ring-[#374b89]/20">
+            <div className="p-6 sm:p-8">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#f3c96e]">Bora Vender+ • Dia do Cliente</span>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight">Ouça nosso podcast sobre a campanha</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-300">O áudio de setembro aprofunda as estratégias do Bora Vender+, incluindo a campanha Cliente Indica Cliente.</p>
+              <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.07] p-3 sm:p-4">
+                <audio controls preload="metadata" className="block h-12 w-full" aria-label="Podcast Bora Vender+ Setembro 2026">
+                  <source src="/audios/blog/bora-vender-mais-setembro-2026.MP3" type="audio/mpeg" />
+                  Seu navegador não suporta reprodução de áudio.
+                </audio>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
       {showPizzariasPlaybook && <BoraVenderPizzariasLeadGate />}
 
       <article className="mx-auto max-w-4xl px-6 pb-8 md:px-8">
