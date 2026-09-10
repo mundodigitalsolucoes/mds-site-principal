@@ -123,8 +123,8 @@ export default function BoraVenderPizzariasLeadGate() {
     <section id="baixar-playbook-pizzarias" className="mx-auto max-w-4xl px-6 pb-4 md:px-8" aria-label="Baixe o Playbook Bora Vender+ Pizzarias">
       <div className="overflow-hidden rounded-3xl bg-[#2f3453] text-white shadow-xl ring-1 ring-[#374b89]/20">
         <div className="grid gap-8 p-6 sm:p-8 md:grid-cols-[220px_1fr] md:items-center md:p-10">
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#202640] shadow-2xl">
-            <img src="/images/blog/bora-vender-pizzarias-2026.png" alt="Bora Vender+ Pizzarias — 12 campanhas estratégicas" width="220" height="220" className="block h-auto w-full object-cover" />
+          <div className="flex items-center justify-center">
+            <img src="/ebooks/ebook-bora-vender-pizzarias.png" alt="Mockup do Playbook Bora Vender+ Pizzarias — 12 campanhas estratégicas" width="220" height="220" className="block h-auto w-full object-contain" />
           </div>
 
           <div>
