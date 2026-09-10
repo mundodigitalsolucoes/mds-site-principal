@@ -20,7 +20,7 @@ const post: BlogPost = {
     "SEO local",
     "GEO",
   ],
-  coverImage: "/images/blog/como-aparecer-google-pesquisas-ia.svg",
+  coverImage: "/images/blog/como-aparecer-google-pesquisas-ia.png",
   featured: true,
   seoTitle: "Como aparecer no Google e nas pesquisas por IA | Bora Vender+",
   seoDescription:
