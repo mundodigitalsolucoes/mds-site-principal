@@ -4,8 +4,10 @@ import siteComumVsSiteInteligente from "./site-comum-vs-site-inteligente";
 import boraVenderSetembro2026 from "./bora-vender-setembro-2026";
 import campanhasPizzaria from "./12-campanhas-para-pizzaria-aumentar-faturamento";
 import diaDoCliente from "./dia-do-cliente-como-vender-mais";
+import aparecerGoogleIa from "./como-aparecer-google-pesquisas-ia";
 
 export const blogPosts = [
+  aparecerGoogleIa,
   diaDoCliente,
   campanhasPizzaria,
   boraVenderSetembro2026,
