@@ -14,6 +14,9 @@ type BlogPostPageProps = {
 const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
 const BORA_VENDER_PIZZARIAS_SLUG = "12-campanhas-para-pizzaria-aumentar-faturamento";
 const DIA_DO_CLIENTE_SLUG = "dia-do-cliente-como-vender-mais";
+const GOOGLE_IA_SLUG = "como-aparecer-google-pesquisas-ia";
+
+const SITE_PROFISSIONAL_URL = "https://site.mundodigitalsolucoes.com.br/";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("pt-BR", {
@@ -55,6 +58,32 @@ function renderGuideBanner(index: number) {
   return <BoraVenderLeadGate key={index} variant="guide" />;
 }
 
+function renderSiteBanner(index: number, bannerNumber: 1 | 2 | 3) {
+  const banner = String(bannerNumber).padStart(2, "0");
+  const href = `${SITE_PROFISSIONAL_URL}?utm_source=blog&utm_medium=cta_banner&utm_campaign=como-aparecer-google-pesquisas-ia&utm_content=banner_site${banner}`;
+
+  return (
+    <a
+      key={index}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="my-8 block overflow-hidden rounded-2xl shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      aria-label="Conhecer Site Profissional da Mundo Digital Soluções"
+    >
+      <picture>
+        <source media="(max-width: 639px)" srcSet={`/images/banners/banner-site${banner}-mobile.png`} />
+        <img
+          src={`/images/banners/banner-site${banner}-desktop.png`}
+          alt="Site Profissional: construa sua presença digital e seja encontrado no Google e nas pesquisas por IA"
+          className="h-auto w-full"
+          loading="lazy"
+        />
+      </picture>
+    </a>
+  );
+}
+
 function renderContentBlocks(content: string, slug: string) {
   const blocks = content
     .trim()
@@ -68,6 +97,12 @@ function renderContentBlocks(content: string, slug: string) {
       block === "**[DOWNLOAD DO GUIA SERÁ INSERIDO AQUI]**"
     ) {
       return renderGuideBanner(index);
+    }
+
+    if (slug === GOOGLE_IA_SLUG) {
+      if (block === "**[CTA SITE PROFISSIONAL 1]**") return renderSiteBanner(index, 1);
+      if (block === "**[CTA SITE PROFISSIONAL 2]**") return renderSiteBanner(index, 2);
+      if (block === "**[CTA SITE PROFISSIONAL 3]**") return renderSiteBanner(index, 3);
     }
 
     if (block.startsWith("## ")) {
