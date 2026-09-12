@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/go/ebook",
+        destination:
+          "https://mundodigitalsolucoes.com.br/blog/como-aparecer-google-pesquisas-ia?utm_source=youtube&utm_medium=organic_video&utm_campaign=bora_vender_google_ia&utm_content=ebook_download",
+        permanent: false,
+      },
+      {
         source: "/go/trafego",
         destination:
           "https://mundodigitalsolucoes.com.br/trafego?utm_source=youtube&utm_medium=organic_video&utm_campaign=bora_vender_google_ia&utm_content=trafego_pago",
