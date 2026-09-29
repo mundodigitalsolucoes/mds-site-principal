@@ -15,6 +15,10 @@ const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
 const BORA_VENDER_PIZZARIAS_SLUG = "12-campanhas-para-pizzaria-aumentar-faturamento";
 const DIA_DO_CLIENTE_SLUG = "dia-do-cliente-como-vender-mais";
 const GOOGLE_IA_SLUG = "como-aparecer-google-pesquisas-ia";
+const BORA_VENDER_OUTUBRO_SLUG = "como-vender-mais-outubro";
+const OUTUBRO_EBOOK_URL = "/ebooks/bora-vender-mais-outubro-2026.pdf";
+const OUTUBRO_YOUTUBE_URL = "https://youtu.be/equ1-tRlpAg?si=JHOgX22V_a0JLwyN";
+const OUTUBRO_SPOTIFY_URL = "https://open.spotify.com/episode/3i3maXmM5AodaqrQfjsrCR?si=F6cCmPeoTuObTwsD-BGDMQ";
 
 const SITE_PROFISSIONAL_URL = "https://site.mundodigitalsolucoes.com.br/";
 
@@ -58,6 +62,29 @@ function renderGuideBanner(index: number) {
   return <BoraVenderLeadGate key={index} variant="guide" />;
 }
 
+function renderOutubroResources(index: number) {
+  return (
+    <section key={index} className="my-10 overflow-hidden rounded-3xl bg-[#2f3453] p-6 text-white shadow-lg sm:p-8">
+      <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#f3c96e]">Bora Vender+ • Outubro 2026</span>
+      <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Leve as estratégias com você</h2>
+      <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-200 sm:text-base">
+        Baixe gratuitamente o e-book completo ou continue esta edição em áudio no YouTube e Spotify.
+      </p>
+      <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        <a href={OUTUBRO_EBOOK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-xl bg-[#e0ae4f] px-4 py-3 text-center text-sm font-bold text-[#202640] transition hover:brightness-105">
+          📘 Baixar e-book grátis
+        </a>
+        <a href={OUTUBRO_YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/15">
+          ▶ Assistir no YouTube
+        </a>
+        <a href={OUTUBRO_SPOTIFY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/15">
+          ♫ Ouvir no Spotify
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function renderSiteBanner(index: number, bannerNumber: 1 | 2 | 3) {
   const banner = String(bannerNumber).padStart(2, "0");
   const href = `${SITE_PROFISSIONAL_URL}?utm_source=blog&utm_medium=cta_banner&utm_campaign=como-aparecer-google-pesquisas-ia&utm_content=banner_site${banner}`;
@@ -97,6 +124,13 @@ function renderContentBlocks(content: string, slug: string) {
       block === "**[DOWNLOAD DO GUIA SERÁ INSERIDO AQUI]**"
     ) {
       return renderGuideBanner(index);
+    }
+
+    if (
+      slug === BORA_VENDER_OUTUBRO_SLUG &&
+      block === "**[RECURSOS BORA VENDER OUTUBRO]**"
+    ) {
+      return renderOutubroResources(index);
     }
 
     if (slug === GOOGLE_IA_SLUG) {
@@ -212,6 +246,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const showAudioPlayer = post.slug === BORA_VENDER_SETEMBRO_SLUG;
   const showPizzariasPlaybook = post.slug === BORA_VENDER_PIZZARIAS_SLUG;
   const showDiaDoClienteResources = post.slug === DIA_DO_CLIENTE_SLUG;
+  const showOutubroResources = post.slug === BORA_VENDER_OUTUBRO_SLUG;
 
   return (
     <main id="topo" className="bg-white text-slate-900 selection:bg-[#374b89] selection:text-white">
@@ -276,6 +311,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </a>
             <a href="#ouvir-dia-do-cliente" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
               ▶ Ouça nosso podcast Bora Vender+ Dia do Cliente
+            </a>
+          </div>
+        )}
+
+        {showOutubroResources && (
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <a href={OUTUBRO_EBOOK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl bg-[#e0ae4f] px-5 py-3.5 text-center text-sm font-bold text-[#202640] transition hover:brightness-105">
+              📘 Baixar e-book grátis
+            </a>
+            <a href={OUTUBRO_YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-center text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
+              ▶ Podcast no YouTube
+            </a>
+            <a href={OUTUBRO_SPOTIFY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-center text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
+              ♫ Ouvir no Spotify
             </a>
           </div>
         )}
