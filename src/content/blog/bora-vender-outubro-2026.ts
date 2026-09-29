@@ -430,7 +430,15 @@ No **Guia Bora Vender+ | Outubro 2026**, eu mostro como transformar essas ideias
 
 Você vai encontrar as estratégias de Outubro Rosa, Dia das Crianças e Halloween, exemplos de aplicação, formas de divulgação, maneiras de acompanhar os resultados e a preparação para a Black Friday.
 
-**[DOWNLOAD DO GUIA SERÁ INSERIDO AQUI]**
+**[📘 Baixar gratuitamente o Guia Bora Vender+ | Outubro 2026](/ebooks/bora-vender-mais-outubro-2026.pdf)**
+
+## Prefere ouvir? Bora Vender+ também está no YouTube e Spotify
+
+Eu também preparei esta edição em formato de podcast, com uma conversa prática sobre as estratégias de outubro e como aplicá-las no seu negócio.
+
+**[▶ Assistir ao podcast no YouTube](https://youtu.be/equ1-tRlpAg?si=JHOgX22V_a0JLwyN)**
+
+**[🎧 Ouvir o podcast no Spotify](https://open.spotify.com/episode/3i3maXmM5AodaqrQfjsrCR?si=F6cCmPeoTuObTwsD-BGDMQ)**
 
 ## Quer colocar alguma dessas estratégias em prática?
 
