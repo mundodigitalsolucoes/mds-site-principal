@@ -24,6 +24,9 @@ export const metadata: Metadata = {
 };
 
 const BORA_VENDER_SETEMBRO_SLUG = "3-datas-de-setembro-para-vender-mais";
+const BORA_VENDER_OUTUBRO_SLUG = "como-vender-mais-outubro";
+const OUTUBRO_EBOOK_URL = "/ebooks/bora-vender-mais-outubro-2026.pdf";
+const OUTUBRO_YOUTUBE_URL = "https://youtu.be/equ1-tRlpAg?si=JHOgX22V_a0JLwyN";
 
 type BlogPageProps = {
   searchParams?: Promise<{
@@ -194,6 +197,27 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
                 {featuredPost.slug === BORA_VENDER_SETEMBRO_SLUG && (
                   <BoraVenderLeadGate variant="featured" />
+                )}
+
+                {featuredPost.slug === BORA_VENDER_OUTUBRO_SLUG && (
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    <a
+                      href={OUTUBRO_EBOOK_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-xl bg-[#e0ae4f] px-5 py-3 text-center text-sm font-bold text-[#202640] transition hover:brightness-105"
+                    >
+                      📘 Baixar e-book grátis
+                    </a>
+                    <a
+                      href={OUTUBRO_YOUTUBE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3 text-center text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15"
+                    >
+                      ▶ Ouvir podcast
+                    </a>
+                  </div>
                 )}
               </div>
             </div>
