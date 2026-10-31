@@ -157,7 +157,7 @@ Baixe o **e-book gratuito Black Friday 2026**, com as campanhas completas, exemp
 
 ## Podcast especial: Black Friday 2026
 
-O podcast Bora Vender+ também aprofundará as três campanhas, discutindo oportunidades e erros comuns para pequenas empresas. Os links oficiais de **YouTube e Spotify** serão acrescentados aqui após a publicação dos episódios.
+No episódio especial do **Bora Vender+**, aprofundo as três campanhas, os erros comuns e as oportunidades para pequenas empresas. **[Ouça no YouTube](https://youtu.be/nLKnvM1YRds)** ou **[escute no Spotify](https://spotifycreators-web.app.link/e/Q66qiCi5G7b)**.
 
 ## Acelere com a Mundo Digital Soluções
 
