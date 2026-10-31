@@ -151,7 +151,9 @@ Para ajudar você a executar essas estratégias, disponibilizamos na Mundo Digit
 
 Neste artigo, compartilhei os fundamentos desta edição especial. O **Guia completo Bora Vender+ Black Friday 2026** aprofunda cada campanha com orientações, mensagens, exemplos para os quatro segmentos, checklist e glossário.
 
-A versão para download será disponibilizada neste artigo quando o arquivo final estiver publicado no site. Enquanto isso, o conteúdo permanece aberto e as ferramentas já podem ser utilizadas online.
+Baixe o **e-book gratuito Black Friday 2026**, com as campanhas completas, exemplos, mensagens e orientações para usar as ferramentas online.
+
+**[EBOOK BV BLACK FRIDAY]**
 
 ## Podcast especial: Black Friday 2026
 
@@ -161,7 +163,9 @@ O podcast Bora Vender+ também aprofundará as três campanhas, discutindo oport
 
 Quer transformar estas estratégias em uma campanha adequada ao seu negócio? Eu e a equipe da Mundo Digital Soluções podemos ajudar. Trabalhamos com planejamento, páginas de conversão, anúncios, automações, CRM e mensuração, de acordo com a necessidade de cada empresa.
 
-**[Agende uma consultoria gratuita](https://mundodigitalsolucoes.com.br/#contato)** e acompanhe as próximas edições no Instagram **@mundodigital.solucoes**.
+**[CONSULTORIA BV BLACK FRIDAY]**
+
+Acompanhe as próximas edições no Instagram **@mundodigital.solucoes**.
 
 **E aí... Bora Vender Mais?**
 `,
