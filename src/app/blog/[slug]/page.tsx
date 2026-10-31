@@ -139,6 +139,17 @@ function renderContentBlocks(content: string, slug: string) {
       if (block === "**[CTA SITE PROFISSIONAL 3]**") return renderSiteBanner(index, 3);
     }
 
+    if (block === "**[FERRAMENTAS BV BLACK FRIDAY]**" && slug === "black-friday-2026-pequenas-empresas") {
+      return (
+        <a key={index} href="/ferramentas/black-friday-2026/" className="my-10 block rounded-3xl bg-[#2f3453] p-6 text-white shadow-lg transition hover:shadow-xl sm:p-8" aria-label="Abrir calculadora e planilha gratuitas da Black Friday 2026">
+          <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#f5c84c]">Bora Vender+ • Ferramentas gratuitas</span>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">Sua promoção dá lucro?</h2>
+          <p className="mt-3 max-w-2xl leading-7 text-slate-200">Teste seu desconto, confira a margem e organize a campanha com a Calculadora de Oferta Inteligente e a planilha da MDS.</p>
+          <span className="mt-5 inline-flex rounded-full bg-[#f5c84c] px-6 py-3 text-sm font-bold text-[#2f3453]">Acessar calculadora + planilha →</span>
+        </a>
+      );
+    }
+
     if (block.startsWith("## ")) {
       return (
         <h2 key={index} className="mt-10 text-2xl font-bold tracking-tight text-[#2f3453] md:text-3xl">
