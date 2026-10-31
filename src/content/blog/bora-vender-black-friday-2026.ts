@@ -10,7 +10,7 @@ const post: BlogPost = {
   readingTime: "12 min",
   category: "Bora Vender+",
   tags: ["Black Friday 2026", "Black Friday pequenas empresas", "promoções lucrativas", "Lista VIP", "e-commerce", "food", "moda", "prestadores de serviços", "Método MDS", "margem de contribuição"],
-  coverImage: "/images/blog/bv-black-friday-2026.svg",
+  coverImage: "/images/blog/bv-black-friday-capa.webp",
   featured: true,
   seoTitle: "Black Friday 2026 para pequenas empresas: 3 campanhas | BV+",
   seoDescription: "Planeje sua Black Friday 2026 com Lista VIP, ofertas inteligentes e pós-venda. Exemplos para food, moda, e-commerce e serviços. Calculadora grátis.",
