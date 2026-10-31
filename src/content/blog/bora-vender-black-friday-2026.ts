@@ -15,13 +15,18 @@ const post: BlogPost = {
   seoTitle: "Black Friday 2026 para pequenas empresas: 3 campanhas | BV+",
   seoDescription: "Planeje sua Black Friday 2026 com Lista VIP, ofertas inteligentes e pós-venda. Exemplos para food, moda, e-commerce e serviços. Calculadora grátis.",
   content: `
+**Por Fábio Alves | Mundo Digital Soluções**
+
+Eu vejo a Black Friday como uma excelente oportunidade para pequenos negócios, mas também como um teste de planejamento. É possível aumentar o movimento e, ao mesmo tempo, prejudicar a margem. Por isso, nesta edição, vou mostrar como eu montaria três campanhas práticas para food, moda, e-commerce e prestadores de serviços.
+
+
 ## Black Friday não é só para grandes varejistas
 
 A Black Friday de 2026 acontece em **27 de novembro**, mas seu planejamento deve começar antes. Restaurantes, lojas de roupas, negócios digitais e prestadores de serviços também podem criar campanhas relevantes — sem precisar competir apenas pelo maior percentual de desconto.
 
-A pergunta principal não é "quanto eu consigo descontar?", e sim **"como atrair compradores, preservar a margem e criar motivos para o cliente voltar?"**. Uma campanha pode aumentar os pedidos e, mesmo assim, consumir a contribuição necessária para sustentar o negócio.
+Na minha experiência com pequenas empresas, a pergunta principal não é "quanto eu consigo descontar?", e sim **"como atrair compradores, preservar a margem e criar motivos para o cliente voltar?"**. Uma campanha pode aumentar os pedidos e, mesmo assim, consumir a contribuição necessária para sustentar o negócio.
 
-Nesta edição especial do **Bora Vender+**, apresentamos três estratégias complementares: **Lista VIP**, **Oferta Inteligente** e **Black Friday que Continua**. Elas foram estruturadas com base no Método MDS, desenvolvido pela Mundo Digital Soluções.
+Nesta edição especial do **Bora Vender+**, eu organizei três estratégias complementares: **Lista VIP**, **Oferta Inteligente** e **Black Friday que Continua**. Estruturei as três com base no Método MDS, que desenvolvemos na Mundo Digital Soluções.
 
 **[FERRAMENTAS BV BLACK FRIDAY]**
 
@@ -29,21 +34,21 @@ Nesta edição especial do **Bora Vender+**, apresentamos três estratégias com
 
 O **Método MDS — Mais Demanda Sempre**, criado pela **Mundo Digital Soluções (MDS)**, organiza o marketing e as vendas em seis pilares: **Benchmarking, Planejamento Estratégico, Canais de Aquisição, Dados — GCAO, Segmentação de Listas e Fidelização**.
 
-Na Black Friday, isso significa observar o mercado, definir para quem vender, escolher ofertas viáveis, divulgar nos canais adequados, registrar os resultados e construir relacionamento depois da compra.
+Quando aplico o método à Black Friday, começo por observar o mercado, definir para quem vender, escolher ofertas viáveis, divulgar nos canais adequados, registrar os resultados e construir relacionamento depois da compra.
 
-O objetivo não é fazer uma promoção isolada: é **planejar, executar, analisar e melhorar**.
+Meu objetivo não é ensinar você a fazer uma promoção isolada: é **planejar, executar, analisar e melhorar**.
 
 ## Antes de oferecer desconto: descubra o que sua empresa precisa
 
-O primeiro passo é selecionar um objetivo comercial principal. Você quer conquistar clientes novos, vender produtos parados, aumentar o ticket médio, preencher horários disponíveis ou estimular a recompra?
+Eu começo selecionando um objetivo comercial principal. Você quer conquistar clientes novos, vender produtos parados, aumentar o ticket médio, preencher horários disponíveis ou estimular a recompra?
 
-Depois, revise estoque, agenda, equipe, frete, canais de atendimento e custos por venda. Compare ofertas de concorrentes, mas não copie preços sem considerar sua estrutura.
+Depois, recomendo revisar estoque, agenda, equipe, frete, canais de atendimento e custos por venda. Compare ofertas de concorrentes, mas não copie preços sem considerar sua estrutura.
 
 Uma campanha preparada deve reunir: público, objetivo, oferta, canal, chamada para ação e forma de mensuração.
 
 ## Campanha 1 — Lista VIP: venda começa antes da sexta-feira
 
-A Lista VIP cria um grupo de interessados que aceita receber informações específicas sobre a campanha. A vantagem pode ser acesso antecipado a produtos selecionados, prioridade de reserva ou aviso de disponibilidade. **Não prometa exclusividade quando ela não existir.**
+Eu utilizaria a Lista VIP para reunir um grupo de interessados que aceita receber informações específicas sobre a campanha. A vantagem pode ser acesso antecipado a produtos selecionados, prioridade de reserva ou aviso de disponibilidade. **Não prometa exclusividade quando ela não existir.**
 
 ### Como aplicar
 
@@ -64,11 +69,11 @@ Acompanhe inscritos, origem dos contatos, abertura de conversas, pedidos efetiva
 
 ## Campanha 2 — Oferta Inteligente: mais valor, não apenas desconto
 
-A segunda campanha trabalha **combos, benefícios progressivos e serviços agregados**. O objetivo é aumentar a atratividade sem comprometer a margem de contribuição.
+Na segunda campanha, eu trabalharia **combos, benefícios progressivos e serviços agregados**. O objetivo é aumentar a atratividade sem comprometer a margem de contribuição.
 
 ### Por que calcular a margem
 
-Imagine um produto vendido normalmente por **R$ 100**, com **R$ 60** de custos variáveis por unidade. Sem desconto, a contribuição é de **R$ 40** (40%). Com 20% de desconto, o preço cai para **R$ 80** e a contribuição para **R$ 20** (25%). A receita caiu 20%, mas a contribuição por venda caiu 50%.
+Veja o exemplo que costumo usar: imagine um produto vendido normalmente por **R$ 100**, com **R$ 60** de custos variáveis por unidade. Sem desconto, a contribuição é de **R$ 40** (40%). Com 20% de desconto, o preço cai para **R$ 80** e a contribuição para **R$ 20** (25%). A receita caiu 20%, mas a contribuição por venda caiu 50%.
 
 É um exemplo hipotético. Impostos, taxas, comissões e frete devem ser considerados conforme a operação real. **Margem de contribuição não é lucro líquido**: ela ainda precisa ajudar a pagar despesas fixas.
 
@@ -87,7 +92,7 @@ Selecione itens com demanda e margem, some os custos variáveis, teste o preço 
 
 ### Dica de Ouro: classifique seu portfólio
 
-Separe o que vende em **itens de atração**, **itens com margem para promoção** e **itens complementares**. Essa classificação pode ajudar a construir uma oferta mais equilibrada do que descontar todo o catálogo.
+Minha recomendação é separar o que você vende em **itens de atração**, **itens com margem para promoção** e **itens complementares**. Essa classificação pode ajudar a construir uma oferta mais equilibrada do que descontar todo o catálogo.
 
 ### Como medir
 
@@ -95,9 +100,9 @@ Compare receita, unidades vendidas, ticket médio e contribuição por pedido. N
 
 ## Campanha 3 — Black Friday que Continua: venda em novembro, relacionamento em dezembro
 
-A venda não termina no pagamento. Entrega correta, atendimento e satisfação criam contexto para uma próxima compra.
+Sempre reforço que a venda não termina no pagamento. Entrega correta, atendimento e satisfação criam contexto para uma próxima compra.
 
-Após cumprir o combinado, uma empresa pode oferecer um benefício relevante para retorno, sugerir um produto complementar, enviar um lembrete de manutenção ou convidar à indicação. Tudo deve respeitar a vontade do cliente e regras claras.
+Depois de cumprir o combinado, eu recomendaria oferecer um benefício relevante para retorno, sugerir um produto complementar, enviar um lembrete de manutenção ou convidar à indicação. Tudo deve respeitar a vontade do cliente e regras claras.
 
 ### Como aplicar nos quatro segmentos
 
@@ -130,7 +135,7 @@ Anúncios pagos podem ampliar o alcance, mas exigem orçamento, página de desti
 
 ## Como saber se sua Black Friday funcionou
 
-O pilar de Dados do Método MDS utiliza o ciclo **GCAO: Gerar, Coletar, Analisar e Otimizar**.
+Para analisar a campanha, aplico o pilar de Dados do Método MDS com o ciclo **GCAO: Gerar, Coletar, Analisar e Otimizar**.
 
 Registre o número de interessados, pedidos realizados, taxa de conversão, ticket médio, margem de contribuição, custo de aquisição quando aplicável e recompra. Compare os indicadores com o objetivo definido antes da campanha.
 
@@ -138,13 +143,13 @@ Registre o número de interessados, pedidos realizados, taxa de conversão, tick
 
 ## Calculadora e planilha Black Friday: coloque a estratégia em prática
 
-A Mundo Digital Soluções disponibiliza uma **Calculadora de Oferta Inteligente** para simular descontos, preços e margem de contribuição, além de uma **planilha de planejamento** para organizar campanhas e resultados.
+Para ajudar você a executar essas estratégias, disponibilizamos na Mundo Digital Soluções uma **Calculadora de Oferta Inteligente** para simular descontos, preços e margem de contribuição, além de uma **planilha de planejamento** para organizar campanhas e resultados.
 
 **[FERRAMENTAS BV BLACK FRIDAY]**
 
 ## Guia Bora Vender+ Black Friday 2026
 
-Este artigo apresenta os fundamentos da edição especial. O **Guia completo Bora Vender+ Black Friday 2026** aprofunda cada campanha com orientações, mensagens, exemplos para os quatro segmentos, checklist e glossário.
+Neste artigo, compartilhei os fundamentos desta edição especial. O **Guia completo Bora Vender+ Black Friday 2026** aprofunda cada campanha com orientações, mensagens, exemplos para os quatro segmentos, checklist e glossário.
 
 A versão para download será disponibilizada neste artigo quando o arquivo final estiver publicado no site. Enquanto isso, o conteúdo permanece aberto e as ferramentas já podem ser utilizadas online.
 
@@ -154,7 +159,7 @@ O podcast Bora Vender+ também aprofundará as três campanhas, discutindo oport
 
 ## Acelere com a Mundo Digital Soluções
 
-Quer transformar estas estratégias em uma campanha adequada ao seu negócio? A Mundo Digital Soluções pode ajudar no planejamento, criação de páginas de conversão, anúncios, automações, CRM e mensuração.
+Quer transformar estas estratégias em uma campanha adequada ao seu negócio? Eu e a equipe da Mundo Digital Soluções podemos ajudar. Trabalhamos com planejamento, páginas de conversão, anúncios, automações, CRM e mensuração, de acordo com a necessidade de cada empresa.
 
 **[Agende uma consultoria gratuita](https://mundodigitalsolucoes.com.br/#contato)** e acompanhe as próximas edições no Instagram **@mundodigital.solucoes**.
 
