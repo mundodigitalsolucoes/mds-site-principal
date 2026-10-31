@@ -156,7 +156,7 @@ function renderContentBlocks(content: string, slug: string) {
       </a>;
     }
     if (slug === "black-friday-2026-pequenas-empresas" && block === "**[EBOOK BV BLACK FRIDAY]**") {
-      return <a key={index} href="/ebooks/bvmais-black-friday-2026.pdf" download className="my-10 block overflow-hidden rounded-2xl transition hover:-translate-y-0.5 hover:shadow-lg" aria-label="Baixar e-book grátis Black Friday 2026 em PDF">
+      return <a key={index} href="/ebooks/bvmais-black-friday-2026-final-github.pdf" download className="my-10 block overflow-hidden rounded-2xl transition hover:-translate-y-0.5 hover:shadow-lg" aria-label="Baixar e-book grátis Black Friday 2026 em PDF">
         <picture>
           <source media="(max-width: 639px)" srcSet="/images/blog/bv-black-friday-ebook-mobile.webp" />
           <img src="/images/blog/bv-black-friday-ebook.webp" alt="Black Friday 2026. E-book grátis: estratégias, campanhas e ferramentas para vender mais." className="h-auto w-full" loading="lazy" />
