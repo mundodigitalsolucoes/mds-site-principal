@@ -139,15 +139,29 @@ function renderContentBlocks(content: string, slug: string) {
       if (block === "**[CTA SITE PROFISSIONAL 3]**") return renderSiteBanner(index, 3);
     }
 
-    if (block === "**[FERRAMENTAS BV BLACK FRIDAY]**" && slug === "black-friday-2026-pequenas-empresas") {
-      return (
-        <a key={index} href="/ferramentas/black-friday-2026/" className="my-10 block rounded-3xl bg-[#2f3453] p-6 text-white shadow-lg transition hover:shadow-xl sm:p-8" aria-label="Abrir calculadora e planilha gratuitas da Black Friday 2026">
-          <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#f5c84c]">Bora Vender+ • Ferramentas gratuitas</span>
-          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">Sua promoção dá lucro?</h2>
-          <p className="mt-3 max-w-2xl leading-7 text-slate-200">Teste seu desconto, confira a margem e organize a campanha com a Calculadora de Oferta Inteligente e a planilha da MDS.</p>
-          <span className="mt-5 inline-flex rounded-full bg-[#f5c84c] px-6 py-3 text-sm font-bold text-[#2f3453]">Acessar calculadora + planilha →</span>
-        </a>
-      );
+    if (slug === "black-friday-2026-pequenas-empresas" && block === "**[FERRAMENTAS BV BLACK FRIDAY]**") {
+      return <a key={index} href="/ferramentas/black-friday-2026/" className="my-10 block overflow-hidden rounded-2xl transition hover:-translate-y-0.5 hover:shadow-lg" aria-label="Usar calculadora e planilha online gratuitamente">
+        <picture>
+          <source media="(max-width: 639px)" srcSet="/images/blog/bv-black-friday-ferramentas-mobile.webp" />
+          <img src="/images/blog/bv-black-friday-ferramentas.webp" alt="Calculadora e Planilha Online. Acesse as ferramentas desta edição no site MDS." className="h-auto w-full" loading="lazy" />
+        </picture>
+      </a>;
+    }
+    if (slug === "black-friday-2026-pequenas-empresas" && block === "**[CONSULTORIA BV BLACK FRIDAY]**") {
+      return <a key={index} href="/#contato" className="my-10 block overflow-hidden rounded-2xl transition hover:-translate-y-0.5 hover:shadow-lg" aria-label="Agende uma consultoria gratuita com a Mundo Digital Soluções">
+        <picture>
+          <source media="(max-width: 639px)" srcSet="/images/blog/bv-black-friday-consultoria-mobile.webp" />
+          <img src="/images/blog/bv-black-friday-consultoria.webp" alt="Quer acelerar seus resultados? Agende uma consultoria gratuita com a Mundo Digital Soluções." className="h-auto w-full" loading="lazy" />
+        </picture>
+      </a>;
+    }
+    if (slug === "black-friday-2026-pequenas-empresas" && block === "**[EBOOK BV BLACK FRIDAY]**") {
+      return <a key={index} href="/ebooks/bvmais-black-friday-2026.pdf" download className="my-10 block overflow-hidden rounded-2xl transition hover:-translate-y-0.5 hover:shadow-lg" aria-label="Baixar e-book grátis Black Friday 2026 em PDF">
+        <picture>
+          <source media="(max-width: 639px)" srcSet="/images/blog/bv-black-friday-ebook-mobile.webp" />
+          <img src="/images/blog/bv-black-friday-ebook.webp" alt="Black Friday 2026. E-book grátis: estratégias, campanhas e ferramentas para vender mais." className="h-auto w-full" loading="lazy" />
+        </picture>
+      </a>;
     }
 
     if (block.startsWith("## ")) {
