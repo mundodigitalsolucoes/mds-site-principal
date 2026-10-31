@@ -1,3 +1,4 @@
+import blackFriday2026 from "./bora-vender-black-friday-2026";
 import metodoMds from "./o-que-e-o-metodo-mds";
 import marketingVendasPmes from "./marketing-e-vendas-pmes";
 import siteComumVsSiteInteligente from "./site-comum-vs-site-inteligente";
@@ -8,6 +9,7 @@ import diaDoCliente from "./dia-do-cliente-como-vender-mais";
 import aparecerGoogleIa from "./como-aparecer-google-pesquisas-ia";
 
 export const blogPosts = [
+  blackFriday2026,
   boraVenderOutubro2026,
   aparecerGoogleIa,
   diaDoCliente,
