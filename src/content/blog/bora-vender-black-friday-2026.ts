@@ -28,7 +28,7 @@ Na minha experiência com pequenas empresas, a pergunta principal não é "quant
 
 Nesta edição especial do **Bora Vender+**, eu organizei três estratégias complementares: **Lista VIP**, **Oferta Inteligente** e **Black Friday que Continua**. Estruturei as três com base no Método MDS, que desenvolvemos na Mundo Digital Soluções.
 
-**[FERRAMENTAS BV BLACK FRIDAY]**
+
 
 ## O Método MDS por trás da estratégia
 
@@ -88,7 +88,7 @@ Veja o exemplo que costumo usar: imagine um produto vendido normalmente por **R$
 
 Selecione itens com demanda e margem, some os custos variáveis, teste o preço promocional na calculadora, determine disponibilidade e condições e publique uma oferta simples de entender.
 
-**[FERRAMENTAS BV BLACK FRIDAY]**
+
 
 ### Dica de Ouro: classifique seu portfólio
 
@@ -157,7 +157,9 @@ Baixe o **e-book gratuito Black Friday 2026**, com as campanhas completas, exemp
 
 ## Podcast especial: Black Friday 2026
 
-No episódio especial do **Bora Vender+**, aprofundo as três campanhas, os erros comuns e as oportunidades para pequenas empresas. **[Ouça no YouTube](https://youtu.be/nLKnvM1YRds)** ou **[escute no Spotify](https://spotifycreators-web.app.link/e/Q66qiCi5G7b)**.
+No episódio especial do **Bora Vender+**, aprofundo as três campanhas, os erros comuns e as oportunidades para pequenas empresas. Escolha onde prefere ouvir ou assistir.
+
+**[PODCAST BV BLACK FRIDAY]**
 
 ## Acelere com a Mundo Digital Soluções
 
