@@ -329,7 +329,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <section className="mx-auto max-w-4xl px-6 py-8 md:px-8">
         <div className="relative h-[240px] overflow-hidden rounded-3xl bg-slate-100 md:h-[420px]">
-          <Image src={post.coverImage} alt={post.title} fill priority className={showBlackFridayResources ? "object-contain p-2 sm:p-4" : "object-cover"} />
+          <Image src={showBlackFridayResources ? "/images/blog/bv-black-friday-ebook.webp" : post.coverImage} alt={post.title} fill priority className="object-cover" />
         </div>
 
         {post.slug === BORA_VENDER_SETEMBRO_SLUG && (
