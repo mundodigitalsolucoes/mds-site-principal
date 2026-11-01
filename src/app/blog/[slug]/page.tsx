@@ -16,6 +16,10 @@ const BORA_VENDER_PIZZARIAS_SLUG = "12-campanhas-para-pizzaria-aumentar-faturame
 const DIA_DO_CLIENTE_SLUG = "dia-do-cliente-como-vender-mais";
 const GOOGLE_IA_SLUG = "como-aparecer-google-pesquisas-ia";
 const BORA_VENDER_OUTUBRO_SLUG = "como-vender-mais-outubro";
+const BLACK_FRIDAY_SLUG = "black-friday-2026-pequenas-empresas";
+const BLACK_FRIDAY_PDF = "/ebooks/bvmais-black-friday-2026-final-github.pdf";
+const BLACK_FRIDAY_YOUTUBE = "https://youtu.be/nLKnvM1YRds?si=I_RYzDW9Fqt5x1oA";
+const BLACK_FRIDAY_SPOTIFY = "https://spotifycreators-web.app.link/e/Q66qiCi5G7b";
 const OUTUBRO_EBOOK_URL = "/ebooks/bora-vender-mais-outubro-2026.pdf";
 const OUTUBRO_YOUTUBE_URL = "https://youtu.be/equ1-tRlpAg?si=JHOgX22V_a0JLwyN";
 const OUTUBRO_SPOTIFY_URL = "https://open.spotify.com/episode/3i3maXmM5AodaqrQfjsrCR?si=F6cCmPeoTuObTwsD-BGDMQ";
@@ -156,12 +160,21 @@ function renderContentBlocks(content: string, slug: string) {
       </a>;
     }
     if (slug === "black-friday-2026-pequenas-empresas" && block === "**[EBOOK BV BLACK FRIDAY]**") {
-      return <a key={index} href="/ebooks/bvmais-black-friday-2026-final-github.pdf" download className="my-10 block overflow-hidden rounded-2xl transition hover:-translate-y-0.5 hover:shadow-lg" aria-label="Baixar e-book grátis Black Friday 2026 em PDF">
+      return <a key={index} href={BLACK_FRIDAY_PDF} target="_blank" rel="noopener noreferrer" className="my-10 block overflow-hidden rounded-2xl transition hover:-translate-y-0.5 hover:shadow-lg" aria-label="Baixar e-book grátis Black Friday 2026 em PDF">
         <picture>
           <source media="(max-width: 639px)" srcSet="/images/blog/bv-black-friday-ebook-mobile.webp" />
           <img src="/images/blog/bv-black-friday-ebook.webp" alt="Black Friday 2026. E-book grátis: estratégias, campanhas e ferramentas para vender mais." className="h-auto w-full" loading="lazy" />
         </picture>
       </a>;
+    }
+
+    if (slug === BLACK_FRIDAY_SLUG && block === "**[PODCAST BV BLACK FRIDAY]**") {
+      return (
+        <div key={index} className="my-8 grid grid-cols-1 gap-3 sm:grid-cols-2" aria-label="Ouça o podcast Black Friday 2026">
+          <a href={BLACK_FRIDAY_YOUTUBE} target="_blank" rel="noopener noreferrer" className="flex min-h-14 items-center justify-center rounded-xl bg-[#2f3453] px-5 py-3 text-center font-semibold text-white transition hover:bg-[#374b89]">▶ Assistir ao podcast no YouTube</a>
+          <a href={BLACK_FRIDAY_SPOTIFY} target="_blank" rel="noopener noreferrer" className="flex min-h-14 items-center justify-center rounded-xl bg-[#147d4a] px-5 py-3 text-center font-semibold text-white transition hover:bg-[#10683e]">♫ Ouvir o podcast no Spotify</a>
+        </div>
+      );
     }
 
     if (block.startsWith("## ")) {
@@ -272,6 +285,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const showPizzariasPlaybook = post.slug === BORA_VENDER_PIZZARIAS_SLUG;
   const showDiaDoClienteResources = post.slug === DIA_DO_CLIENTE_SLUG;
   const showOutubroResources = post.slug === BORA_VENDER_OUTUBRO_SLUG;
+  const showBlackFridayResources = post.slug === BLACK_FRIDAY_SLUG;
 
   return (
     <main id="topo" className="bg-white text-slate-900 selection:bg-[#374b89] selection:text-white">
@@ -315,7 +329,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <section className="mx-auto max-w-4xl px-6 py-8 md:px-8">
         <div className="relative h-[240px] overflow-hidden rounded-3xl bg-slate-100 md:h-[420px]">
-          <Image src={post.coverImage} alt={post.title} fill priority className="object-cover" />
+          <Image src={post.coverImage} alt={post.title} fill priority className={showBlackFridayResources ? "object-contain p-2 sm:p-4" : "object-cover"} />
         </div>
 
         {post.slug === BORA_VENDER_SETEMBRO_SLUG && (
@@ -337,6 +351,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <a href="#ouvir-dia-do-cliente" className="inline-flex w-full items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-5 py-3.5 text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">
               ▶ Ouça nosso podcast Bora Vender+ Dia do Cliente
             </a>
+          </div>
+        )}
+
+        {showBlackFridayResources && (
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3" aria-label="Materiais Bora Vender+ Black Friday 2026">
+            <a href={BLACK_FRIDAY_PDF} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-xl bg-[#e0ae4f] px-4 py-3 text-center text-sm font-bold text-[#202640] transition hover:brightness-105">📘 Baixar e-book grátis</a>
+            <a href={BLACK_FRIDAY_YOUTUBE} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-4 py-3 text-center text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">▶ Podcast no YouTube</a>
+            <a href={BLACK_FRIDAY_SPOTIFY} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-4 py-3 text-center text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">♫ Ouvir no Spotify</a>
           </div>
         )}
 
