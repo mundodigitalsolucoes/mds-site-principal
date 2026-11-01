@@ -150,11 +150,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 className="relative block aspect-[1200/630] w-full overflow-hidden bg-[#071a34] md:self-start"
               >
                 <Image
-                  src={featuredPost.coverImage}
+                  src={featuredPost.slug === "black-friday-2026-pequenas-empresas" ? "/images/blog/bv-black-friday-ebook.webp" : featuredPost.coverImage}
                   alt={featuredPost.title}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  className={featuredPost.slug === "black-friday-2026-pequenas-empresas" ? "object-contain" : "object-cover"}
+                  className="object-cover"
                   priority
                 />
               </Link>
@@ -194,6 +194,14 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                     Ler matéria completa
                   </Link>
                 </div>
+
+                {featuredPost.slug === "black-friday-2026-pequenas-empresas" && (
+                  <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3" aria-label="Materiais Black Friday 2026">
+                    <a href="/ebooks/bvmais-black-friday-2026-final-github.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#e0ae4f] px-3 py-3 text-center text-sm font-bold text-[#202640] transition hover:brightness-105">📘 Baixar e-book</a>
+                    <a href="https://youtu.be/nLKnvM1YRds?si=I_RYzDW9Fqt5x1oA" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-3 py-3 text-center text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">▶ YouTube</a>
+                    <a href="https://spotifycreators-web.app.link/e/Q66qiCi5G7b" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#374b89]/20 bg-[#374b89]/10 px-3 py-3 text-center text-sm font-semibold text-[#2f3453] transition hover:bg-[#374b89]/15">♫ Spotify</a>
+                  </div>
+                )}
 
                 {featuredPost.slug === BORA_VENDER_SETEMBRO_SLUG && (
                   <BoraVenderLeadGate variant="featured" />
